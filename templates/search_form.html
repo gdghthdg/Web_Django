@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>runoob.com</title>
+    <style type="text/css">
+{#<link rel="stylesheet" type="text/css" href="E:\Web_Django\CSS\center.css" />#}
+.divForm{
+position: absolute;/*绝对定位*/
+width: 350px;
+height: 260px;
+
+border: 1px solid red;
+text-align: center;/*(让div中的内容居中)*/
+top: 50%;
+left: 50%;
+margin-top: -200px;
+margin-left: -150px;
+background-color:#6FFBFF;
+}
+html {
+  background-color: #B2FAFF;
+}
+
+  </style>
+
+</head>
+<body>
+<div class="divForm">
+    <form action="/search_sql" method="post">
+        {% csrf_token %}
+        <p>编码:<input type="text" name="q"></p>
+        <p>名称:<input type="text" name="w"></p>
+        <input type="submit" value="搜索">
+    </form>
+
+    <p>编码:{{ txm }}</p>
+    <p>种类:{{ typeof }}</p>
+    <p>名称:{{ wupin_name }}</p>
+    <p>{{ result }}</p>
+</div>
+
+</body>
+</html>

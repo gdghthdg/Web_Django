@@ -1,0 +1,56 @@
+建立一个项目(django-admin startprojest testprojest)
+进行数据的迁移
+
+(1)python manage.py makemigrations  告诉模型已经改变
+(2)python manage.py migrate  进行迁移开始
+
+
+MVC(模型 , 视图  , 控制)
+一个项目(web_django)
+包含多个py程序
+
+一个模型(testmodel)
+数据库字段的增删改查
+
+一个模板(templates)
+html的编写
+
+
+数据库的连接
+(1)默认sqlite3
+(2)mysql
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',  # 或者使用 mysql.connector.django,# django项目必须要提前创建好
+        'NAME': 'test_database',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST':'127.0.0.1',
+        'PORT':'3306',
+    }
+}
+
+(3)sqlserver
+DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+    'default': {
+        'ENGINE': 'sqlserver',
+        'NAME': 'xueshengxinxi',
+        'HOST': '172.17.130.107',
+        'PORT': '1433',
+        'USER': 'sa',
+        'PASSWORD': '12345678',
+        'OPTIONS': {
+            'DRIVER': 'SQL Server Native Client 10.0',
+        },
+    }
+}
+
+
+进行一个html的学习
+css的学习
+javascrip
+直接连接sql就好,
