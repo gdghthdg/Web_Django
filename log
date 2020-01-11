@@ -54,3 +54,6 @@ DATABASES = {
 css的学习
 javascrip
 直接连接sql就好,
+
+
+先输入一个网址,由url映射到一个函数,函数返回一个html,html表单提交到一个网址,循环
