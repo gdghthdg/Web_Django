@@ -1,6 +1,10 @@
 import MySQLdb
+from traceback import print_exc
+from django.views.decorators import csrf
+from django.http import HttpResponse
+from django.shortcuts import render_to_response
 
-
+#mysql的使用函数
 def mysql_execute(sql_order):
     # 打开数据库连接
     db = MySQLdb.connect("localhost", "root", "123456", "test_database", charset='utf8' )
@@ -21,6 +25,15 @@ def mysql_execute(sql_order):
 
     # 关闭数据库连接
     db.close()
+
+
+
     return data
 
-mysql_execute("select * from mysql_thing_lh")
+
+def sreen(valse):
+
+    return valse
+
+if __name__=="__main__":
+    mysql_execute("select * from mysql_thing_lh")

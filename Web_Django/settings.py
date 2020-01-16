@@ -89,6 +89,12 @@ TEMPLATES = [
     },
 ]
 
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "templates/static"),
+]
+
+
 WSGI_APPLICATION = 'Web_Django.wsgi.application'
 
 

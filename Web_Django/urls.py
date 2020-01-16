@@ -18,7 +18,7 @@ from django.urls import path
 
 from django.conf.urls import url
 
-from . import views,testdb,search,post,search_sql
+from . import views,testdb,search,post,search_sql,login
 
 from django.contrib import admin
 from django.urls import path
@@ -37,7 +37,7 @@ urlpatterns = [
 
     url(r'^testdb$', testdb.testdb),
 
-    url(r'^login/', admin.site.urls),#admin登录
+    url(r'^admin/', admin.site.urls),#admin登录
 
 
 
@@ -47,6 +47,22 @@ urlpatterns = [
 
     url(r'^search_post1$', post.search_post1),
 
+
+
+    #查找物品的详细信息
+    url(r'^search_info$', search_sql.search_info),
+
     #url(r'^search_info$', search_sql.search_show),
-    url(r'^search_sql$', search_sql.search_info),
+    url(r'^search_mysql$', search_sql.search_info),
+
+    #登录账号
+    url(r'^login$', login.login_funcation),
+
+    #注册账号与忘记密码
+    url(r'^login_register$', login.register),
+
+    #选择一个物品,显示出它的信息
+    url(r'^search_address$', search_sql.search_address),
+
+
 ]

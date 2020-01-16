@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link href="static/CSS/login.css" rel="stylesheet">
+</head>
+<body>
+<div class="login_interface_css">
+    <form action="/login" method="post">
+        {% csrf_token %}
+        <br><br>
+
+        账号:<input type="test" name="admin"><br><br>
+        密码:<input type="test" name="password"><br><br><br>
+        <input type="image" src="static/images/img_submit.gif" alt="Submit" width="48" height="48">
+
+        <br><br><a href="/login_register" align="left">注册</a><span>&nbsp&nbsp&nbsp&nbsp</span><a href="/login_register">忘记密码</a>
+    </form>
+
+    <p class="p_result">{{ result }}}</p>
+
+</div>
+
+<div class="box"></div>
+
+<input list="browsers" name="list_choice">
+<datalist id="browsers">
+
+    <option value='iiia sd'>
+
+
+</datalist>
+
+</body>
+</html>
